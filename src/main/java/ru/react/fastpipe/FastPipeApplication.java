@@ -10,6 +10,4 @@ public class FastPipeApplication {
 		SpringApplication.run(FastPipeApplication.class, args);
 		System.out.println("App started ok! Use http://localhost:8080/api/v1/user");
 	}
-
-
 }
