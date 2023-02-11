@@ -12,9 +12,16 @@ import org.springframework.web.reactive.config.WebFluxConfigurer;
 public class WebConfig implements WebFluxConfigurer {
     @Override
     public void configurePathMatching(PathMatchConfigurer configurer) {
+
         configurer
                 .setUseCaseSensitiveMatch(true)
-                .addPathPrefix("/api", HandlerTypePredicate.forAnnotation(RestController.class));
+                .addPathPrefix("/api", HandlerTypePredicate.forAnnotation(RestController.class))
+                .addPathPrefix("/", HandlerTypePredicate.forAnyHandlerType());
     }
 
+//    @Override
+//    public void configureViewResolvers(ViewResolverRegistry registry) {
+//        WebFluxConfigurer.super.configureViewResolvers(registry);
+//        registry.freeMarker();
+//    }
 }
