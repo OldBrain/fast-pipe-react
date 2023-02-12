@@ -1,9 +1,8 @@
-package ru.react.fastpipe.repo;
+package ru.react.fastpipe.repositoryes;
 
-import lombok.NoArgsConstructor;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
-import ru.react.fastpipe.data.UserEntity;
+import ru.react.fastpipe.model.UserEntity;
 
 @Repository
 public interface UserRepository extends ReactiveCrudRepository<UserEntity, Long> {

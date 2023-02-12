@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import ru.react.fastpipe.data.UserEntity;
-import ru.react.fastpipe.repo.UserRepository;
+import ru.react.fastpipe.model.UserEntity;
+import ru.react.fastpipe.repositoryes.UserRepository;
 
 @Service
 @AllArgsConstructor

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import ru.react.fastpipe.data.UserEntity;
+import ru.react.fastpipe.model.UserEntity;
 import ru.react.fastpipe.services.UserService;
 
 @RestController
@@ -18,8 +18,8 @@ public class UserController {
     @GetMapping("")
     public Flux<UserEntity> getTestString() {
         return userService.getAll();
-//        return "Привет!";
     }
+
     @PostMapping("")
     public Mono<UserEntity> addUser(@RequestBody UserEntity user) {
         return userService.addUser(user);

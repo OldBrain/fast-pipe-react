@@ -1,4 +1,4 @@
-package ru.react.fastpipe.data;
+package ru.react.fastpipe.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
