@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import ru.react.fastpipe.dtos.UserDto;
 import ru.react.fastpipe.model.UserEntity;
 import ru.react.fastpipe.services.UserService;
 
@@ -15,12 +16,12 @@ public class UserController {
     @Autowired
     private final UserService userService;
 
-    @GetMapping("")
-    public Flux<UserEntity> getTestString() {
+    @GetMapping("/all")
+    public Flux<UserDto> getTestString() {
         return userService.getAll();
     }
 
-    @PostMapping("")
+    @PostMapping("/add")
     public Mono<UserEntity> addUser(@RequestBody UserEntity user) {
         return userService.addUser(user);
     }
